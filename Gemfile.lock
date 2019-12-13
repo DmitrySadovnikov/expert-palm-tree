@@ -200,6 +200,8 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
     zeitwerk (2.2.2)
+    zero_downtime_migrations (0.0.7)
+      activerecord
 
 PLATFORMS
   ruby
@@ -221,6 +223,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   shoulda-matchers
+  zero_downtime_migrations
 
 RUBY VERSION
    ruby 2.6.1p33

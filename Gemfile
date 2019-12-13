@@ -9,6 +9,7 @@ gem 'pry-byebug'
 gem 'pry-rails'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2'
+gem 'zero_downtime_migrations'
 
 group :development do
   gem 'listen'

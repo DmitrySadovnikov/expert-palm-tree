@@ -14,5 +14,8 @@ Style/FrozenStringLiteralComment:
 Style/Documentation:
   Enabled: false
 
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
 Metrics/LineLength:
   Max: 120
