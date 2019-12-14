@@ -1,11 +1,89 @@
-Please create 2 models with at least the following attributes:
-- Stock (name: string - must be unique)
-- Bearer (name: string - must be unique)(can own many stocks)
+# API
+**base_url: https://expert-palm-tree.herokuapp.com**
 
-Please create some JSON API endpoints:
-1) Create a stock with a referenced bearer.
-2) Update a stock. The bearer cannot be updated with this endpoint. If you need to change it, a new object needs to be created. If Bearer exists already, it must be re-used and connected to the stock.
-3) List all stocks with information their Bearer.
-4) Soft-delete a stock so it doesn't appear on the API.
+Headers
+```json
+{
+  "Content-Type": "application/json"
+}
+```
 
-Error responses should be detailed enough to see what exactly is missing or wrong.
+## Stocks
+**GET /api/v1/stocks**
+
+*Request params:*
+- page // integer, optional
+- per_page // integer, optional
+
+*Response code: 200*
+
+*Response body:*
+```json
+{
+  "data": [
+    {
+      "id": "uuid",
+      "name": "name",
+      "bearer_name": "bearer_name"
+    }
+  ]
+}
+```
+
+**POST /api/v1/stocks**
+
+*Request body:*
+```json
+{
+  "name": "name",
+  "bearer_name": "bearer_name" // optional
+}
+```
+
+*Response codes:*
+- 201 // success
+- 400 // wrong params
+- 404 // stock not found
+
+*Response body:*
+```json
+{
+  "data": {
+    "id": "uuid",
+    "name": "name",
+    "bearer_name": "bearer_name"
+  }
+}
+```
+
+**PATCH /api/v1/stocks/:id**
+
+*Request body:*
+```json
+{
+  "name": "name",
+  "bearer_name": "bearer_name" // optional
+}
+```
+
+*Response codes:*
+- 200 // success
+- 400 // wrong params
+- 404 // stock not found
+
+*Response body:*
+```json
+{
+  "data": {
+    "id": "uuid",
+    "name": "name",
+    "bearer_name": "bearer_name"
+  }
+}
+```
+
+**DELETE /api/v1/stocks/:id**
+
+*Response codes:*
+- 200 // success
+- 404 // stock not found
