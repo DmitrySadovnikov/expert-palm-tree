@@ -10,6 +10,7 @@ gem 'pry-byebug'
 gem 'pry-rails'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2'
+gem 'rails_12factor', group: :production
 gem 'tram-page'
 gem 'zero_downtime_migrations'
 
