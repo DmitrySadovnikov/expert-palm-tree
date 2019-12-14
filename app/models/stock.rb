@@ -3,4 +3,6 @@ class Stock < ApplicationRecord
 
   validates :bearer, :name, presence: true
   validates :name, uniqueness: true
+
+  scope :visible, -> { where(is_deleted: false) }
 end

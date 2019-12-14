@@ -68,6 +68,7 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    dry-initializer (3.0.1)
     erubi (1.9.0)
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
@@ -82,6 +83,18 @@ GEM
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -193,6 +206,8 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.20.3)
     thread_safe (0.3.6)
+    tram-page (0.1.6)
+      dry-initializer
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.0)
@@ -211,6 +226,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   faker
+  kaminari
   listen
   pg
   pry-byebug
@@ -223,6 +239,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   shoulda-matchers
+  tram-page
   zero_downtime_migrations
 
 RUBY VERSION

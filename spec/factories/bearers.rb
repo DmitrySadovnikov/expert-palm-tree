@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :bearer do
-    name { Faker::Lorem.word }
+    sequence(:name) { |n| "bearer_#{n}" }
   end
 end

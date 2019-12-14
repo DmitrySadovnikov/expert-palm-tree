@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :stock do
     bearer
-    name { Faker::Lorem.word }
+    sequence(:name) { |n| "stock_#{n}" }
   end
 end

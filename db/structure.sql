@@ -82,6 +82,7 @@ CREATE TABLE public.stocks (
     id uuid DEFAULT public.gen_random_uuid() NOT NULL,
     bearer_id uuid NOT NULL,
     name character varying NOT NULL,
+    is_deleted boolean DEFAULT false NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL
 );

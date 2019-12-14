@@ -1,3 +1,15 @@
+class ErbBinding
+  def initialize(options = {})
+    options.each do |k, v|
+      instance_variable_set("@#{k}", v)
+    end
+  end
+
+  def binding
+    Kernel.binding
+  end
+end
+
 RSpec.configure do |config|
   config.order = :random
   config.filter_run_when_matching :focus

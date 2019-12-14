@@ -4,11 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 gem 'dotenv-rails'
+gem 'kaminari'
 gem 'pg'
 gem 'pry-byebug'
 gem 'pry-rails'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2'
+gem 'tram-page'
 gem 'zero_downtime_migrations'
 
 group :development do
