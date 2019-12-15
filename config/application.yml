@@ -1,0 +1,14 @@
+default: &default
+  pagination:
+    default_page: 1
+    default_per_page: 20
+    default_max_per_page: 100
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
