@@ -8,7 +8,7 @@ gem 'kaminari'
 gem 'pg'
 gem 'pry-byebug'
 gem 'pry-rails'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.0.2'
 gem 'rails_12factor', group: :production
 gem 'tram-page'
